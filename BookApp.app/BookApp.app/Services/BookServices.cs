@@ -29,30 +29,14 @@ namespace BookApp.app.Services
 
             NewBook.Name = Console.ReadLine();
 
-            if (string.IsNullOrEmpty(NewBook.Name))
+            
+            while (string.IsNullOrWhiteSpace(NewBook.Name))
             {
+                Console.WriteLine("Please, add valid name");
+
+                NewBook.Name = Console.ReadLine();
+
             }
-                
-                
-            
-            
-
-
-
-
-            
-            
-
-      
-
-
-             
-
-                
-                
-                
-
-
 
          
             Console.WriteLine("Please, add Price");
@@ -65,11 +49,7 @@ namespace BookApp.app.Services
 
 
 
-
-
-
         }
-
-
     }
 }
+
